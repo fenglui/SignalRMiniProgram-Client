@@ -32,7 +32,7 @@ Page({
   
     this.hubConnect = new Hub.HubConnection();
 
-    this.hubConnect.start("https://chat.jingshonline.net/chat", { nickName: app.globalData.userInfo.nickName, avatar: app.globalData.userInfo.avatarUrl });
+    this.hubConnect.start("https://localhost:44374/chat", { nickName: app.globalData.userInfo.nickName, avatar: app.globalData.userInfo.avatarUrl });
     this.hubConnect.onOpen = res => {
       console.log("成功开启连接")
     }

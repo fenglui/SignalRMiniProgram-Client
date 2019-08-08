@@ -8,6 +8,6 @@
     </block>
   </view>
   <view class="usermotto">
-    <button type='primary' bindtap='chat'>进入聊天室</button>
+    <button type='primary' bindtap='chat'>在线客服</button>
   </view>
 </view>

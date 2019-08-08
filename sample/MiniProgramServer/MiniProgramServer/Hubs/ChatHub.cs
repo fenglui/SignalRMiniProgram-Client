@@ -9,7 +9,7 @@ namespace MiniProgramServer.Hubs
 {
     public class ChatHub : Hub
     {
-        public const string ChatName = "找工作-.-";
+        public const string ChatName = "聚塔客服-.-";
 
         public static ConcurrentDictionary<string, OnlineClient> OnlineClients { get; }
 
@@ -39,8 +39,6 @@ namespace MiniProgramServer.Hubs
             await Groups.AddToGroupAsync(Context.ConnectionId, ChatName);
             await Clients.GroupExcept(ChatName, new[] { Context.ConnectionId }).SendAsync("system", $"用户{client.NickName}加入了群聊");
             await Clients.Client(Context.ConnectionId).SendAsync("system", $"成功加入{ChatName}");
-
-
         }
 
         public override async Task OnDisconnectedAsync(Exception exception)
